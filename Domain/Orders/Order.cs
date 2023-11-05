@@ -23,6 +23,7 @@ public class Order
             Id = Guid.NewGuid(),
             CustomerId = customer.Id
         };
+	Console.WriteLine("Hello");
         return order;
     }
 
@@ -30,6 +31,11 @@ public class Order
     {
         var LineItem = new LineItem(Guid.NewGuid(), Id, product.Id, product.Price);
         _lineItems.Add(LineItem);
+    }
+
+    public void PrintHelloWorld()
+    {
+        Console.WriteLine("Hello World");
     }
 }
 
